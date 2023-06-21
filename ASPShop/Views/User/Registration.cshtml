@@ -1,0 +1,19 @@
+﻿@model ASPShop.Models.User
+
+<form asp-action="registration" asp-controller="user">
+    <p>
+        <label asp-for="Name">ФИО</label><br />
+        <input type="text" asp-for="Name" />
+    </p>
+    <p>
+        <label asp-for="Email">Почта</label><br />
+        <input type="text" asp-for="Email" />
+    </p>
+    <p>
+        <label asp-for="Password">Пароль</label><br />
+        <input type="text" asp-for="Password" />
+    </p>
+    <p>
+        <input type="submit" value="Создать" />
+    </p>
+</form>

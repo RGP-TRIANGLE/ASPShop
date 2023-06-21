@@ -1,0 +1,29 @@
+﻿@model IEnumerable<ASPShop.Models.Product>
+
+<h2>Список продуктов</h2>
+<p><a asp-action="Create">Добавить продукт</a></p>
+<table class="table">
+    <tr>
+        <th>Наименование</th>
+        <th>Стоимость</th>
+        <th>Количество</th>
+        <th>Описание</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.Price</td>
+            <td>@item.Count</td>
+            <td>@item.Description</td>
+            <td>
+                <a asp-action="Edit" asp-controller="Home" asp-route-id="@item.ID">Изменить</a>
+            </td>
+            <td>
+                <form asp-controller="Home" asp-action="Delete" method="post" asp-route-id="@item.ID">
+                    <input type="submit" value="Удалить" />
+                </form>
+            </td>
+        </tr>
+    }
+</table>

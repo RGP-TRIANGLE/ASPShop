@@ -1,0 +1,24 @@
+﻿@model ASPShop.Models.Product
+
+<h2>Добавление товара</h2>
+<form asp-action="edit" asp-controller="home" asp-route-id="@Model.ID">
+    <p>
+        <label asp-for="Name">Наименование</label><br />
+        <input type="text" asp-for="Name" />
+    </p>
+    <p>
+        <label asp-for="Price">Стоимость</label><br />
+        <input type="number" asp-for="Price" />
+    </p>
+    <p>
+        <label asp-for="Count">Количество</label><br />
+        <input type="number" asp-for="Count" />
+    </p>
+    <p>
+        <label asp-for="Description">Описание</label><br />
+        <input type="text" asp-for="Description" />
+    </p>
+    <p>
+        <input type="submit" value="Сохранить" />
+    </p>
+</form>
